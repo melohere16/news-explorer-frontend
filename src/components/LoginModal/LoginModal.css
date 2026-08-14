@@ -1,0 +1,136 @@
+.login-modal__form {
+  width: 100%;
+}
+
+.login-modal__label {
+  display: block;
+  margin: 0 0 8px;
+  color: #2f71e5;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+.login-modal__input {
+  width: 100%;
+  height: 28px;
+  margin: 0 0 30px;
+  padding: 0 0 10px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  background: transparent;
+  color: #000;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+.login-modal__input::placeholder {
+  color: #b6bcbf;
+}
+
+.login-modal__input:focus {
+  border-bottom-color: #000;
+}
+
+.login-modal__submit {
+  width: 358px;
+  max-width: 100%;
+  height: 64px;
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 100px;
+  background-color: #e6e8eb;
+  color: #b6bcbf;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-modal__switch {
+  margin: 16px 0 0;
+  text-align: center;
+  color: #000;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.login-modal__switch button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #2f71e5;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .login-modal__submit {
+    width: 100%;
+  }
+}
+
+.login-modal__submit_active {
+  background-color: #2f71e5;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-modal__submit:hover {
+  background-color: #2f71e5;
+  color: #fff;
+}
+
+.login-modal__submit_active:hover {
+  background-color: #347eff;
+}
+
+.login-modal__submit_active:active {
+  background-color: #2a65cc;
+}
+
+@media screen and (max-width: 600px) {
+  .login-modal__label {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login-modal__label {
+    margin-bottom: 8px;
+  }
+
+  .login-modal__input {
+    height: 28px;
+    margin-bottom: 30px;
+    padding: 0 0 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login-modal__input:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .login-modal__submit {
+    width: 100%;
+    margin-top: 56px;
+  }
+
+  .login-modal__switch {
+    margin-top: 16px;
+  }
+}

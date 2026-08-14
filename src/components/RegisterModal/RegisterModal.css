@@ -1,0 +1,114 @@
+.register-modal__form {
+  width: 100%;
+}
+
+.register-modal__label {
+  display: block;
+  margin: 0 0 8px;
+  color: #2f71e5;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+.register-modal__input {
+  width: 100%;
+  height: 28px;
+  margin: 0 0 30px;
+  padding: 0 0 10px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  background: transparent;
+  color: #000;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+.register-modal__input::placeholder {
+  color: #b6bcbf;
+}
+
+.register-modal__input:focus {
+  border-bottom-color: #000;
+}
+
+.register-modal__input_last {
+  margin-bottom: 22px;
+}
+
+.register-modal__submit {
+  width: 358px;
+  max-width: 100%;
+  height: 64px;
+  padding: 0;
+  border: 0;
+  border-radius: 100px;
+  background-color: #e6e8eb;
+  color: #b6bcbf;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register-modal__switch {
+  margin: 16px 0 0;
+  text-align: center;
+  color: #000;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.register-modal__switch button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #2f71e5;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .register-modal__submit {
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 601px) {
+  .modal:has(.register-modal__form) .modal__container {
+    height: 458px;
+    min-height: 458px;
+  }
+}
+
+.register-modal__submit:disabled {
+  cursor: default;
+}
+
+.register-modal__submit_active {
+  background-color: #2f71e5;
+  color: #fff;
+  cursor: pointer;
+}
+
+.register-modal__submit_active:hover {
+  background-color: #347eff;
+}
+
+.register-modal__submit_active:active {
+  background-color: #2a65cc;
+}
+
+/* Sign up button hover */
+.register-modal__submit:hover {
+  background-color: #2f71e5;
+  color: #fff;
+}
