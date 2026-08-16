@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navigation.css";
 import logoutIcon from "../../assets/logout.svg";
 
@@ -10,20 +10,29 @@ function Navigation({
   username,
   onLogout,
 }) {
+  const location = useLocation();
+  const isSavedNewsPage = location.pathname === "/saved-news";
+
   return (
     <>
       <nav
         className={`navigation ${
           isMenuOpen ? "navigation_opened" : ""
-        } ${isLoggedIn ? "navigation_logged-in" : ""}`}
+        } ${isSavedNewsPage ? "navigation_logged-in" : ""}`}
       >
-        <Link className="navigation__home" to="/">
+        <Link
+          className={`navigation__home ${!isSavedNewsPage ? "navigation__home_active" : ""}`}
+          to="/"
+        >
           Home
         </Link>
 
         {isLoggedIn ? (
           <>
-            <Link className="navigation__saved" to="/saved-news">
+            <Link
+              className={`navigation__saved ${isSavedNewsPage ? "navigation__saved_active" : ""}`}
+              to="/saved-news"
+            >
               Saved articles
             </Link>
 
@@ -37,7 +46,7 @@ function Navigation({
               <img
                 className="navigation__logout-icon"
                 src={logoutIcon}
-                alt=""
+                alt="Logout"
               />
             </button>
           </>

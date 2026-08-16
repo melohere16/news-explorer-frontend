@@ -47,12 +47,16 @@
   }
 }
 
-.header_logged-in {
+.header_saved-news {
   color: #1a1b22;
   background-color: #fff;
   border-bottom: 1px solid #d1d2d6;
 }
 
-.header_logged-in .header__logo {
+.header_saved-news .header__logo {
   color: #1a1b22;
+}
+/* Hover effects */
+.header__logo:hover {
+  opacity: 0.7;
 }

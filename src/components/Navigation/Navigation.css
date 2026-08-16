@@ -17,14 +17,21 @@
   text-decoration: none;
 }
 
-.navigation__home::after {
+.navigation__home::after,
+.navigation__saved::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   height: 3px;
-  background: #fff;
+  background: currentColor;
+  display: none;
+}
+
+.navigation__home_active::after,
+.navigation__saved_active::after {
+  display: block;
 }
 
 .navigation__signin {
@@ -220,11 +227,11 @@
 }
 
 @media screen and (max-width: 480px) {
-  .header_logged-in .navigation__menu-line {
+  .header_saved-news .navigation__menu-line {
     background: #1a1b22;
   }
 
-  .header_logged-in .navigation__menu_opened .navigation__menu-line {
+  .header_saved-news .navigation__menu_opened .navigation__menu-line {
     background: #fff;
   }
 }
@@ -264,15 +271,26 @@
     border-color: #fff;
   }
 
-  .header_logged-in:has(.navigation__menu_opened) {
+  .header_saved-news:has(.navigation__menu_opened) {
     background: #1a1b22;
   }
 
-  .header_logged-in:has(.navigation__menu_opened) .header__logo {
+  .header_saved-news:has(.navigation__menu_opened) .header__logo {
     color: #fff;
   }
 
-  .header_logged-in .navigation__menu_opened .navigation__menu-line {
+  .header_saved-news .navigation__menu_opened .navigation__menu-line {
     background: #fff;
   }
+}
+
+/* Hover effects */
+.navigation__home:hover,
+.navigation__saved:hover {
+  opacity: 0.7;
+}
+
+.navigation__signin:hover,
+.navigation__user:hover {
+  opacity: 0.7;
 }

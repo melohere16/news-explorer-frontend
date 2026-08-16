@@ -125,7 +125,10 @@
 
 @media screen and (max-width: 600px) {
   .modal__close {
-    display: none;
+    display: block;
+    top: 16px;
+    right: 16px;
+    color: #1a1b22;
   }
 }
 

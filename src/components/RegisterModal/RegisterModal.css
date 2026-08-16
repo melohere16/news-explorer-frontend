@@ -112,3 +112,27 @@
   background-color: #2f71e5;
   color: #fff;
 }
+.register-modal__error {
+  display: block;
+  margin: -24px 0 17px;
+  color: #ff0000;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+.register-modal__submit:disabled {
+  background-color: #e6e8eb;
+  color: #b6bcbf;
+  cursor: default;
+}
+
+.register-modal__submit:disabled:hover {
+  background-color: #e6e8eb;
+  color: #b6bcbf;
+}
+/* Modal link hover */
+.register-modal__switch button:hover {
+  opacity: 0.7;
+}

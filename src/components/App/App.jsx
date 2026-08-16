@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
@@ -10,6 +10,7 @@ import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import SuccessModal from "../SuccessModal/SuccessModal";
 import SavedNews from "../SavedNews/SavedNews";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import { getNews } from "../../utils/NewsApi.js";
 
 function App() {
@@ -192,7 +193,7 @@ function App() {
         <Route
           path="/saved-news"
           element={
-            isLoggedIn ? (
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
               <>
                 <Header
                   onSignInClick={handleSignInClick}
@@ -207,9 +208,7 @@ function App() {
                   onDeleteArticle={handleDeleteArticle}
                 />
               </>
-            ) : (
-              <Navigate to="/" replace />
-            )
+            </ProtectedRoute>
           }
         />
       </Routes>

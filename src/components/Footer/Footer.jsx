@@ -29,7 +29,7 @@ function Footer() {
           rel="noreferrer"
           aria-label="GitHub"
         >
-          <img className="footer__social-icon" src={githubIcon} alt="" />
+         <img className="footer__social-icon" src={githubIcon} alt="GitHub" />
         </a>
 
         <a
@@ -39,7 +39,7 @@ function Footer() {
           rel="noreferrer"
           aria-label="LinkedIn"
         >
-          <img className="footer__social-icon" src={linkedinIcon} alt="" />
+         <img className="footer__social-icon" src={linkedinIcon} alt="LinkedIn" />
         </a>
       </nav>
     </footer>

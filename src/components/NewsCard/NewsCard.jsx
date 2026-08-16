@@ -58,11 +58,13 @@ function NewsCard({
         aria-label={isSavedPage ? "Delete article" : "Save article"}
         onClick={handleActionClick}
       >
-        <img
-          className={`news-card__action-icon ${isSavedPage ? "news-card__action-icon_trash" : ""}`}
-          src={isSavedPage ? trashIcon : isSaved ? savedActiveIcon : savedIcon}
-          alt=""
-        />
+    <img
+  className={`news-card__action-icon ${
+    isSavedPage ? "news-card__action-icon_trash" : ""
+  }`}
+  src={isSavedPage ? trashIcon : isSaved ? savedActiveIcon : savedIcon}
+  alt={isSavedPage ? "Delete article" : isSaved ? "Article saved" : "Save article"}
+/>
       </button>
 
       <div className="news-card__content">
