@@ -1,0 +1,37 @@
+.success-modal {
+  width: 100%;
+}
+
+.success-modal__title {
+  margin: 0 0 14px;
+  color: #1a1b22;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 900;
+}
+
+.success-modal__signin {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #2f71e5;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 601px) {
+  .modal:has(.success-modal) .modal__container {
+    width: 430px;
+    height: 182px;
+    min-height: 182px;
+  }
+
+  .modal:has(.success-modal) .modal__title {
+    display: none;
+  }
+}

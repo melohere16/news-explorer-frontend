@@ -1,0 +1,137 @@
+.about {
+  width: 100%;
+  background: #fff;
+  padding: 64px 0;
+}
+
+.about__container {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.about__image {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #d1d2d6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.about__content {
+  max-width: 600px;
+}
+
+.about__title {
+  margin: 0 0 24px;
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 400;
+  color: #1a1b22;
+}
+
+.about__text {
+  margin: 0 0 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1a1b22;
+}
+
+.about__text:last-child {
+  margin-bottom: 0;
+}
+
+/* FOR TABLET */
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about__container {
+    padding: 0 40px;
+    gap: 32px;
+  }
+
+  .about__image {
+    width: 232px;
+    height: 232px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .about__title {
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .about__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* FOR MOBILE */
+
+@media screen and (max-width: 600px) {
+  .about {
+    padding: 32px 0 80px;
+  }
+
+  .about__container {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .about__image {
+    width: 272px;
+    height: 272px;
+    align-self: center;
+    flex-shrink: 0;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .about__content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .about__title {
+    margin: 0 0 16px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  .about__text {
+    margin: 0 0 24px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .about__text:last-child {
+    margin-bottom: 0;
+  }
+}
